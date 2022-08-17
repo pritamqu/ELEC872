@@ -41,34 +41,34 @@ for i = 1:total_fold
     x_test  = dataset(test, 1:18);
     y_test  = dataset.activity(test);
     
-%% ------------> Build your model here <------------
+    %% ------------> Build your model and train here <------------
 
 
-% svm
-% model = templateSVM('KernelFunction', 'linear', 'PolynomialOrder', [], 'KernelScale', 'auto', 'BoxConstraint', 1,'Standardize', true);
-% model = templateSVM('KernelFunction', 'gaussian', 'PolynomialOrder', [], 'KernelScale', 'auto', 'BoxConstraint', 1,'Standardize', true);
-% model = templateSVM('KernelFunction', 'polynomial', 'PolynomialOrder', 3, 'KernelScale', 'auto', 'BoxConstraint', 1, 'Standardize', true);
-% model_trained = fitcecoc(x_train, y_train, 'Learners', model, 'Coding', 'onevsone'); 
+    % svm
+    % model = templateSVM('KernelFunction', 'linear', 'PolynomialOrder', [], 'KernelScale', 'auto', 'BoxConstraint', 1,'Standardize', true);
+    % model = templateSVM('KernelFunction', 'gaussian', 'PolynomialOrder', [], 'KernelScale', 'auto', 'BoxConstraint', 1,'Standardize', true);
+    % model = templateSVM('KernelFunction', 'polynomial', 'PolynomialOrder', 3, 'KernelScale', 'auto', 'BoxConstraint', 1, 'Standardize', true);
+    % model_trained = fitcecoc(x_train, y_train, 'Learners', model, 'Coding', 'onevsone'); 
 
-% knn
-% model = templateKNN('Distance', 'euclidean', 'NumNeighbors', 5);
-% model = templateKNN('Distance', 'euclidean', 'NumNeighbors', 1);
-% model_trained = fitcecoc(x_train, y_train, 'Learners', model);
-
-
-% naive bayes
-% model_trained = fitcnb(x_train,y_train, 'DistributionNames', 'normal');
+    % knn
+    % model = templateKNN('Distance', 'euclidean', 'NumNeighbors', 5);
+    % model = templateKNN('Distance', 'euclidean', 'NumNeighbors', 1);
+    % model_trained = fitcecoc(x_train, y_train, 'Learners', model);
 
 
-% decision tree
-% model = templateTree('MaxNumSplits', 5); 
-% model_trained = fitcecoc(x_train,y_train,'Learners',model);
-% model_trained = fitctree(x_train,y_train, 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
+    % naive bayes
+    % model_trained = fitcnb(x_train,y_train, 'DistributionNames', 'normal');
 
 
-% rng(1);
-% model_trained = fitctree(x_train,y_train, 'CrossVal','on', 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
-% view(model_trained.Trained{1},'Mode','graph')
+    % decision tree
+    % model = templateTree('MaxNumSplits', 5); 
+    % model_trained = fitcecoc(x_train,y_train,'Learners',model);
+    % model_trained = fitctree(x_train,y_train, 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
+
+
+    % rng(1);
+    % model_trained = fitctree(x_train,y_train, 'CrossVal','on', 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
+    % view(model_trained.Trained{1},'Mode','graph')
 
     %% evaluation
     
