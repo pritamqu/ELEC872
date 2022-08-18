@@ -61,8 +61,6 @@ for i = 1:total_fold
 
 
     % decision tree
-    % model = templateTree('MaxNumSplits', 5); 
-    % model_trained = fitcecoc(x_train,y_train,'Learners',model);
     % model_trained = fitctree(x_train,y_train, 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
 
 

@@ -31,6 +31,7 @@ for task = 1:numel(class)
     unique_group            = unique(db_table.group_id);
     
     for cal_k = 1:size(unique_group, 1)
+        % you may modify here to extract different set of features.
         data             = table2array(db_table(db_table.group_id ==unique_group(cal_k),1:size(db_table,2)-1));
         max_feature      = max(data);   % calculate max of each segmented signal
         min_feature      = min(data);   % calculate min of each segmented signal
