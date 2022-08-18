@@ -46,7 +46,7 @@ model_trained = fitcecoc(x_train, y_train, 'Learners', model);
 model_trained = fitcnb(x_train,y_train, 'DistributionNames', 'normal');
 ```
 
-**decision tree**
+**Decision Tree**
 ```
 % train the model
 model_trained = fitctree(x_train,y_train, 'MaxNumSplits', 8, 'MinLeafSize', 1, 'MinParentSize', 10);
