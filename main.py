@@ -93,6 +93,7 @@ def main():
     if not torch.cuda.is_available():
         print('using CPU, this will be slow')
     else:
+        # we will use GPU if available, even 'none' is mentioned.
         # assuming we have just one GPU
         args.gpu = 0
         model.cuda()
