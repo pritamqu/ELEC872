@@ -1,3 +1,5 @@
 __pycache__/
 .spyproject/
 temp*
+pytorch_ddp.py
+Data/
