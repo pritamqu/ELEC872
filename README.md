@@ -1,6 +1,6 @@
 # ELEC872 - Coding Tutorial
 
-- [ ] Setup local environment for machine/deep learning
-- [x] Setup colab for machine/deep learning
-- [x] A quick guide to Matlab for machine learning (pre-packaged)
+- [x] [Setup local environment for machine/deep learning](./environment_setup.md)
+- [x] [Setup colab for machine/deep learning](./colab_setups.ipynb)
+- [x] [A quick guide to Matlab for machine learning](./matlab/)
 - [ ] A sample machine/deep learning example
