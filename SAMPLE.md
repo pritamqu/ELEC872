@@ -33,4 +33,4 @@ python main.py \
 
 ### Google Colab
 
-We provide a sample demonstration on how to use Google Colab for the same purpose. Please see an example [here](main.ipynb)
+We provide a sample demonstration on how to use Google Colab for the same purpose. Please see an example [here](main.ipynb).
